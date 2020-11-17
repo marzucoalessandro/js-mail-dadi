@@ -21,16 +21,17 @@ var trovato = false;
 for (var i = 0; i < listamail.length; i++) {
   if (listamail[i] == domanda) {
     trovato = true
+    // in caso positivo stampiamo un msg
     document.getElementById('nomeutente').innerHTML = "ciao " + domanda;
   }
 
 }
 console.log(trovato);
 
-
-
-
-// in caso positivo stampiamo un msg
-
 //4 se non è presente nella ns lista allora
-// nn stampiamo il messaggio.
+//  stampiamo un altro messaggio.
+
+if (trovato !== domanda) {
+  document.getElementById('nomeutente').innerHTML = "spiacente " + domanda + " la tua mail non è sulla lista";
+
+}
