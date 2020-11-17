@@ -33,5 +33,35 @@ console.log(trovato);
 
 if (trovato !== domanda) {
   document.getElementById('nomeutente').innerHTML = "spiacente " + domanda + " la tua mail non è sulla lista";
-
 }
+
+
+// gioco dei dadi
+
+//Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
+//Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+//1 creiamo due variabili per i giocatori;
+
+var giocatore
+var computer
+
+
+
+//ogni variabile genera un numero casuale compreso tra 1 e 6
+
+giocatore = Math.floor(Math.random() * 6) + 1;
+computer = Math.floor(Math.random() * 6) + 1;
+
+//mostriamo i due numeri generati a video
+document.getElementById('player').innerHTML = giocatore;
+document.getElementById('comp').innerHTML = computer;
+//a questo punto dobbiamo stabilire chi vince con varie ipotesi;
+if (giocatore > computer) {
+
+    console.log("vince il giocatore");
+  } else if (giocatore < computer) {
+    console.log("vince il computer");
+  } else if (giocatore == computer) {
+    console.log("parità");
+  }
