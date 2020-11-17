@@ -21,8 +21,9 @@ var trovato = false;
 for (var i = 0; i < listamail.length; i++) {
   if (listamail[i] == domanda) {
     trovato = true
+    document.getElementById('nomeutente').innerHTML = "ciao " + domanda;
   }
-  
+
 }
 console.log(trovato);
 
