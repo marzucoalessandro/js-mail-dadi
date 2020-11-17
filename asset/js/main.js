@@ -20,12 +20,13 @@ console.log(listamail[2]);
 var trovato = false;
 for (var i = 0; i < listamail.length; i++) {
   if (listamail[i] == domanda) {
-    trovato = true
+    trovato = true;
+    trovato = domanda;
     // in caso positivo stampiamo un msg
     document.getElementById('nomeutente').innerHTML = "ciao " + domanda;
   }
-
 }
+
 console.log(trovato);
 
 //4 se non è presente nella ns lista allora
@@ -58,10 +59,12 @@ document.getElementById('player').innerHTML = giocatore;
 document.getElementById('comp').innerHTML = computer;
 //a questo punto dobbiamo stabilire chi vince con varie ipotesi;
 if (giocatore > computer) {
-
-    console.log("vince il giocatore");
-  } else if (giocatore < computer) {
-    console.log("vince il computer");
-  } else if (giocatore == computer) {
-    console.log("parità");
-  }
+  document.getElementById('risultato').innerHTML = "vince il giocatore";
+  console.log("vince il giocatore");
+} else if (giocatore < computer) {
+  document.getElementById('risultato').innerHTML = "vince il computer";
+  console.log("vince il computer");
+} else if (giocatore == computer) {
+  document.getElementById('risultato').innerHTML = "parità";
+  console.log("parità");
+}
